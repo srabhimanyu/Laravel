@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/admin/posts', function () {
+    
     return view('welcome');
+   // return "admin is here";
 });
