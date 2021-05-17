@@ -13,8 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/admin/posts', function () {
+Route::get('/', function () {
     
     return view('welcome');
    // return "admin is here";
 });
+
+Route::get('/about', function () {
+    return "Hi about page";
+});
+
+Route::get('/contact', function () {
+    return "Hi i am contact";
+});
+
+Route::get('/post/{id}/{name}', function ($id,$name) {
+    return "This is post number".$id." ".$name;
+});
+
