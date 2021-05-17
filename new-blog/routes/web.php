@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PostsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,30 +13,31 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+// Route::get('/', function () {
     
-    return view('welcome');
-   // return "admin is here";
-});
+//     return view('welcome');
+//    // return "admin is here";
+// });
 
-Route::get('/about', function () {
-    return "Hi about page";
-});
+// Route::get('/about', function () {
+//     return "Hi about page";
+// });
 
-Route::get('/contact', function () {
-    return "Hi i am contact";
-});
+// Route::get('/contact', function () {
+//     return "Hi i am contact";
+// });
 
-Route::get('/post/{id}/{name}', function ($id,$name) {
-    return "This is post number".$id." ".$name;
-});
+// Route::get('/post/{id}/{name}', function ($id,$name) {
+//     return "This is post number".$id." ".$name;
+// });
 
-Route::get('/admin/posts/example',array('as'=>'admin.home', function() {
- $url = route('admin.home');
+// Route::get('/admin/posts/example',array('as'=>'admin.home', function() {
+//  $url = route('admin.home');
  
-  return "this url is" . $url;
-}));
+//   return "this url is" . $url;
+// }));
 
+Route::get('/post',[PostsController::class,'index']);
 
 
 
