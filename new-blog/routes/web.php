@@ -37,7 +37,6 @@ use App\Http\Controllers\PostsController;
 //   return "this url is" . $url;
 // }));
 
-Route::get('/post/{id}',[PostsController::class,'index']);
+// Route::get('/post/{id}',[PostsController::class,'index']);
 
-
-
+Route::resource('posts','App\Http\Controllers\PostsController');
